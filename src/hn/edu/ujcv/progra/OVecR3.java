@@ -3,12 +3,25 @@ package hn.edu.ujcv.progra;
 public class OVecR3 {
 
     // miembros
+    private double i;
+    private double j;
+    private double k;
 
 
     // accesoras y mutadoras
+    public OVecR3 (double i, double j, double k){
+        this.i = i;
+        this.j = j;
+        this.k = k;
+    }
+
+    public double getJ() {
+        return j;
+    }
+
     public OVecR3 suma(OVecR3 b){
         //TODO: implementar
-        return new OVecR3();
+        return new;
     }
 
     public OVecR3 resta(OVecR3 b){

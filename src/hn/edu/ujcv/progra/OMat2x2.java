@@ -4,6 +4,7 @@ public class OMat2x2 {
 
     // miembros  double m11,m12;
     //           double m21,m22;
+    private double vector1;
 
 
     // accesoras y mutadoras
