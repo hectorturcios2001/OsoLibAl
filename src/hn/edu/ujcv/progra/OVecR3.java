@@ -14,39 +14,58 @@ public class OVecR3 {
         this.j = j;
         this.k = k;
     }
+    public OVecR3 (OVecR3 b){
+
+    }
+    public OVecR3() {
+
+    }
 
     public double getJ() {
         return j;
     }
-
-    public OVecR3 suma(OVecR3 b){
-        //TODO: implementar
-        return new;
+    public double getI(){
+        return i;
+    }
+    public double getK(){
+        return k;
     }
 
-    public OVecR3 resta(OVecR3 b){
-        //TODO: implementar
-        return new OVecR3();
-    }
+     public OVecR3 suma(OVecR3 b){
 
-    public OVecR3 prodCruz(OVecR3 b){
-        //
-        //  x  y  z
-        //  x1 y1 z1       i = y * z1 - z * y1;
-        //                 j = - ();
-        //                 k = ;
-        //
-        return new OVecR3();
-    }
+         return new OVecR3(this.i + b.i, this.j + b.j, this.k + b.k);
+     }
+
+     public OVecR3 resta(OVecR3 b) {
+
+         return new OVecR3(this.i - b.i, this.j - b.j, this.k - b.k);
+     }
+     public OVecR3 prodCruz(OVecR3 b){
+//        preguntar
+       return new OVecR3((this.j*b.k)+(this.k*b.j),(this.i*b.k)+(this.k*b.i),(this.i*b.j)+(this.j*b.i));
+
+             //
+             //  i  j  k
+             //  x1 y1 z1       i = y * z1 - z * y1;
+             //  x2 y2 z2       j = - ();
+             //                 k = ;
+             //
+
+
+
+     }
+
 
     public double prodPunto(OVecR3 b){
-        //TODO: implementar
-        return 0.0f;
+
+      double punto = this.i*b.i + this.j*b.j  +this.k*b.k;
+      return punto;
     }
 
     public double magnitud(){
-        //TODO: implementar
-        return 0.0f;
+        double mag = Math.sqrt(this.i*this.i+this.j+this.j+this.k+this.k);
+        return mag;
+
     }
 
     // metodos
