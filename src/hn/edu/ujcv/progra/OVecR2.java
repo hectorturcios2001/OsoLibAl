@@ -44,8 +44,7 @@ public class OVecR2 {
     }
 
     public double magnitud(){
-        double mag = Math.sqrt(this.i*2+this.j*2);
-        return mag;
+        return  Math.sqrt(this.i*2+this.j*2);
     }
 
 

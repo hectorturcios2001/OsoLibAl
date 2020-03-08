@@ -42,15 +42,7 @@ public class OVecR3 {
      }
      public OVecR3 prodCruz(OVecR3 b){
 //        preguntar
-       return new OVecR3((this.j*b.k)+(this.k*b.j),(this.i*b.k)+(this.k*b.i),(this.i*b.j)+(this.j*b.i));
-
-             //
-             //  i  j  k
-             //  x1 y1 z1       i = y * z1 - z * y1;
-             //  x2 y2 z2       j = - ();
-             //                 k = ;
-             //
-
+       return new OVecR3((this.j*b.k)+(this.k*b.j),-((this.i*b.k)+(this.k*b.i)),(this.i*b.j)+(this.j*b.i));
 
 
      }

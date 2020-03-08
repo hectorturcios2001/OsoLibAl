@@ -1,7 +1,6 @@
 import hn.edu.ujcv.progra.LectorDeTeclado;
 import hn.edu.ujcv.progra.OVecR2;
 
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +11,8 @@ public class Main {
         OVecR2 vec = new OVecR2();
         System.out.println("\t\t\tBienvenido a La Calculadora");
         System.out.println("\t\t\n Que operacion desea reaizar \n1) Vectores\n2) Matrices");
-        lc.getInteger("Numero invalido reintente");
-//        if (lc.getInteger("Vuelva a intentar") == 1 ){
+        Integer x = lc.getInteger("Numero invalido reintente");
+       if (x == 1 ){
             System.out.println("Ingrese el vector A");
             System.out.println("Ingrese i");
              vec.setI(lc.getDouble("Caracter invalido intente de nuevo"));
@@ -26,7 +25,7 @@ public class Main {
             vec.setJ(lc.getDouble("Caracter invalido intente de nuevo"));
 
 
-//        }
+        }
 
 
 
