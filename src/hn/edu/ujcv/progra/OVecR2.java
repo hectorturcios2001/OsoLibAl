@@ -39,16 +39,14 @@ public class OVecR2 {
     }
 
     public double prodPunto(OVecR2 b){
+        double punto = this.i*b.i + this.j*b.i;
 
-        return 0.0f;
+        return punto;
     }
 
     public double magnitud(){
         return  Math.sqrt(this.i*2+this.j*2);
     }
 
-
-    // constructores
-    public OVecR2(){}
 
 }

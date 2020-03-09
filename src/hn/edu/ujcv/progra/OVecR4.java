@@ -7,6 +7,13 @@ public class OVecR4 {
     private double k;
     private double l;
 
+//  Constructores
+    public OVecR4(double i, double j, double k, double l) {
+
+    }
+    public OVecR4(OVecR4 a){
+
+    }
 
     // accesoras
     public double setI(){
@@ -38,24 +45,22 @@ public class OVecR4 {
     // metodos
 
     public OVecR4 suma(OVecR4 b){
-        //TODO: implementar
-        return new OVecR4();
+
+        return new OVecR4(this.i + b.i, this.j+b.j, this.k+b.k, this.l+b.l);
     }
 
     public OVecR4 resta(OVecR4 b){
-        //TODO: implementar
-        return new OVecR4();
+
+        return new OVecR4(this.i-b.i, this.j-b.j, this.k-b.k, this.l-b.l);
     }
 
     public double prodPunto(OVecR4 b){
-        //TODO: implementar
-        return 0.0f;
+        double puntoR4 = this.i*b.i + this.j*b.j + this.k*b.k + this.l*b.l;
+        return puntoR4;
     }
 
     public double magnitud(){
-        //TODO: implementar
-        return 0.0f;
+        double magR4 = Math.sqrt(i*i + j*j + k*k + l*l);
+        return magR4;
     }
-
-    // constructores
 }
