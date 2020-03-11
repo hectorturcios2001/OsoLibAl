@@ -4,10 +4,10 @@ public class OMat2x2{
 
     // miembros  double m11,m12;
     //           double m21,m22;
-    private double vector1;
 
 
     // accesoras y mutadoras
+
     //getColX
     //getColY
     //getFilaX
@@ -55,15 +55,14 @@ public class OMat2x2{
     public static OMat2x2 rot(double alpha){
         // cos a   -sin a
         // sin a   cos a
+        double m11,m12,m21,m22;
 
-        double  m11,m12,
-                m21,m22;
 
         m11 = Math.cos(alpha);
         m12 = -Math.sin(alpha);
         m21 = Math.sin(alpha);
         m22 = Math.cos(alpha);
-        return new OMat2x2(m11,m12,m21,m22);
+        return new OMat2x2();
     }
 
     public static OMat2x2 identidad(){
@@ -80,7 +79,7 @@ public class OMat2x2{
         //             x                        y
         //  ( a.x * m11 + a.y * m21 , a.x * m12 + a.y * m22)
         //
-        return new OVecR2();
+        return new OVecR2(9,0);
     }
 
 
@@ -91,8 +90,6 @@ public class OMat2x2{
 
     public OMat2x2(OMat2x2 a){}
 
-    public OMat2x2(double m11, double m12,
-                   double m21, double m22){}
 
     public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
 

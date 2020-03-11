@@ -9,7 +9,7 @@ public class OVecR2 {
 
     }
 
-    public OVecR2(OVecR2 a){
+    public OVecR2(){
 
     }
 
@@ -45,8 +45,10 @@ public class OVecR2 {
     }
 
     public double magnitud(){
-        return  Math.sqrt(this.i*2+this.j*2);
+        return  Math.sqrt(this.i*this.i+this.j*this.j);
     }
+
+
 
 
 }

@@ -59,8 +59,6 @@ public class LectorDeTeclado {
 
     }
 
-    public Scanner getSc() {
-        return sc;
-    }
+
 }
 
