@@ -2,10 +2,32 @@ package hn.edu.ujcv.progra;
 
 public class OMat2x2{
 
-    // miembros  double m11,m12;
-    //           double m21,m22;
+    private   double m11,m12;
+    private   double m21,m22;
 
 
+    public OMat2x2(double m11, double m21, double m12, double m22){
+
+    }
+    public void setM11(double m11){
+        this.m11 = m11;
+    }
+    public void setM12(double m12){
+        this.m12 = m12;
+    }
+    public void setM21(double m21){
+        this.m21 = m21;
+    }
+    public void setM22(double m22){
+        this.m22 = m22;
+    }
+
+    public double getM11() {
+        return m11;
+    }
+    public void getM12(){
+        this.m12 = m12;
+    }
     // accesoras y mutadoras
 
     //getColX
@@ -16,7 +38,8 @@ public class OMat2x2{
     // metodos
 
     public OMat2x2 transpuesta(){
-        //TODO: implementar
+         this.m21 = this.m12;
+         this.m12 = this.m21;
         return new OMat2x2();
     }
 
@@ -88,7 +111,7 @@ public class OMat2x2{
 
     public OMat2x2(OVecR2 a){}
 
-    public OMat2x2(OMat2x2 a){}
+    public OMat2x2(OMat2x2 b){}
 
 
     public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
