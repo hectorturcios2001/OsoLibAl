@@ -5,13 +5,18 @@ public class OMat2x2{
     private double i;
     private double j;
 
-    public OMat2x2(OVecR2 a,OVecR2 b){
+    public OMat2x2(double i, double j){}
+
+    public OMat2x2(OMat2x2 a,OMat2x2 b){
 
     }
 
     public OMat2x2(){}
 
-    OVecR2 a = new OVecR2();
+    public void setCol1 (OMat2x2 a, OMat2x2 b){
+
+    }
+
 
     public OMat2x2 transpuesta(OVecR2 b){
 
