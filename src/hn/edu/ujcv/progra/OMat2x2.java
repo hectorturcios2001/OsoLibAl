@@ -2,25 +2,18 @@ package hn.edu.ujcv.progra;
 
 public class OMat2x2{
 
-
-
-    public OMat2x2(OVecR2 a, OVecR2 b){
-
-    }
-
     private double i;
     private double j;
 
-    public OMat2x2(double i, double j){
-        this.i = i;
-        this.j = j;
+    public OMat2x2(OVecR2 a,OVecR2 b){
+
     }
 
+    public OMat2x2(){}
+
     OVecR2 a = new OVecR2();
-    OVecR2 b = new OVecR2();
-    public OMat2x2 transpuesta(){
-//        m11 m12
-//        m21 m22
+
+    public OMat2x2 transpuesta(OVecR2 b){
 
         return new OMat2x2();
     }
@@ -84,18 +77,11 @@ public class OMat2x2{
         //             x                        y
         //  ( a.x * m11 + a.y * m21 , a.x * m12 + a.y * m22)
         //
-        return new OVecR2(9,0);
+        return new OVecR2();
     }
 
 
     // constructores
-    public OMat2x2(){}
 
-    public OMat2x2(OVecR2 a){}
-
-    public OMat2x2(OMat2x2 b){}
-
-
-    public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
 
 }
