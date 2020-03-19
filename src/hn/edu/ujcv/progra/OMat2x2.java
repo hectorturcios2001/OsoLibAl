@@ -13,12 +13,14 @@ public class OMat2x2{
 
     public OMat2x2(){}
 
-    public void setCol1 (OMat2x2 a, OMat2x2 b){
-
+    public void setCol1 (OMat4x4 b){
+        this.i = i;
+        this.j = j;
     }
 
 
     public OMat2x2 transpuesta(OVecR2 b){
+
 
         return new OMat2x2();
     }

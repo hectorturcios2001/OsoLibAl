@@ -2,73 +2,24 @@ package hn.edu.ujcv.progra;
 
 public class OMat4x4 {
     // miembros
-    private double i;
-    private double j;
-    private double k;
-    private double l;
+   private double m11; private  double m12; private double m13; private double m14;
+    private double m21; private  double m22; private double m23; private double m24;
+    private double m31; private double m32; private double m33; private double m34;
+    private double m41; private double m42; private double m43; private double m44;
 
-    public OMat4x4 (double i, double j, double k, double l){
-        this.i = i;
-        this.j = j;
-        this.k = k;
-        this.l = l;
+    public OMat4x4 (double m11, double m12, double m13, double m14,
+                    double m21, double m22, double m23, double m24,
+                    double m31, double m32, double m33, double m34,
+                    double m41, double m42, double m43, double m44){
     }
 
     public OMat4x4(){}
 
-    public OMat4x4(OMat4x4 a, OMat4x4 b, OMat4x4 c, OMat4x4 d){}
-
-
-    // accesoras y mutadoras
-    public double getI(){
-        return i;
-    }
-    public double getJ(){
-        return j;
-    }
-    public double getK() {
-        return k;
-    }
-    public double getL() {
-        return l;
-    }
-    public void setJ(double j) {
-        this.j = j;
-    }
-    public  void setI(double i){
-        this.i = i;
-    }
-    public void setK(double k){
-        this.k = k;
-    }
-    public void setL(double l){
-        this.l = l;
-    }
-
     // metodos
 
-    public OMat4x4 tra(OMat4x4 a, OMat4x4 b, OMat4x4 c, OMat4x4 d){
-//      Comlumna 1
-        b.i = a.j;
-        c.i = a.k;
-        d.i = a.l;
-//      columna 2
-        a.j = b.i;
-        d.j = b.k;
-        c.j = b.l;
-//      Columna 3
-        a.k = c.i;
-        b.k = c.j;
-        d.k = c.l;
-//      Columan 4
-        a.l = d.i;
-        b.l = d.j;
-        c.l = d.k;
-        return new OMat4x4();
-    }
+    public OMat4x4 inversa(OMat4x4 b){
 
-    public OMat4x4 inversa(){
-        //TODO: implementar
+
         return new OMat4x4();
     }
     public OMat4x4 suma(OMat4x4 b){
