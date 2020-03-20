@@ -30,6 +30,9 @@ public class OVecR3 {
     public double getK(){
         return k;
     }
+    public void setI(double i){this.i = i;}
+    public void setJ(double j){this.j = j;}
+    public void setK(double k){this.k = k;}
 
      public OVecR3 suma(OVecR3 b){
 
@@ -57,4 +60,12 @@ public class OVecR3 {
 
     }
 
+    @Override
+    public String toString() {
+        return
+                "i=" + i +
+                ", j=" + j +
+                ", k=" + k +
+                '}';
+    }
 }

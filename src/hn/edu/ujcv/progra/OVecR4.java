@@ -11,12 +11,12 @@ public class OVecR4 {
     public OVecR4(double i, double j, double k, double l) {
 
     }
-    public OVecR4(OVecR4 a){
+    public OVecR4(){
 
     }
 
     // accesoras
-    public double setI(){
+    public double setI(double aDouble){
         return i;
     }
     public double setJ(){
@@ -62,5 +62,15 @@ public class OVecR4 {
     public double magnitud(){
         double magR4 = Math.sqrt(i*i + j*j + k*k + l*l);
         return magR4;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "i=" + i +
+                ", j=" + j +
+                ", k=" + k +
+                ", l=" + l +
+                '}';
     }
 }
