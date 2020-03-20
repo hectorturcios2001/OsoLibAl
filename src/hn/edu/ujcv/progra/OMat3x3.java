@@ -57,8 +57,8 @@ public class OMat3x3 {
         return new OMat3x3(m11,m21,m31,m12,m22,m32,m13,m23,m33);
     }
 
-    public OMat3x3 inversa(){
-        return new OMat3x3();
+    public OMat3x3 inversa(OMat3x3 b){
+        return new OMat3x3(b.m11*2*(m22*m33-m32*m23),Math.pow(m12,3)*(m21*m22-m31*m23),Math.pow(m13,4)*(m21*m32-m31*m22),Math.pow(m21,3)*(m12*m22-m13*m32),Math.pow(m22,4)*(m11*m22-m13*m31),Math.pow(m23,5)*(m11*m32-m31*m12),Math.pow(m31,4)*(m12*m23-m13*m22),Math.pow(m32,5)*(m11*m23-m21*m13),Math.pow(m33,6)*(m11*m22-m21*m12));
     }
 
     public OMat3x3 suma(OMat3x3 b){
