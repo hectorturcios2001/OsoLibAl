@@ -16,7 +16,7 @@ public class Main {
         String mensaje = "Numero invalido reintente";
         System.out.println("\n\t\t\tBienvenido a La Calculadora");
         System.out.println("\t\t\n Que operacion desea reaizar \n1) Vectores\n2) Matrices");
-        Integer x = lc.getInteger(mensaje);
+        int x = lc.getInteger(mensaje);
         if (x == 1) {
             System.out.println("Ingrese coon que tipo de vector desea realizar\n1) Vector en R2\n2) Vector en R3\n3) Vector en R4");
             x = lc.getInteger(mensaje);
@@ -134,43 +134,132 @@ public class Main {
             x = lc.getInteger(mensaje);
             switch (x) {
                 case 1: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n4) Multiplicacion\n " +
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n4) Resta\n4) Multiplicacion\n" +
                             "5) Determinate\n6) Rotacion\n7) Multiplicaion por vector");
                     x = lc.getInteger(mensaje);
+                    OMat2x2 A = new OMat2x2();
+                    OMat2x2 B = new OMat2x2();
                     switch (x) {
                         case 1: {
+                            A = lc.lectorDe2x2();
+                            System.out.println(A.inversa());
+                            break;
                         }
                         case 2: {
+
+                            break;
                         }
                         case 3: {
+                            A = lc.lectorDe2x2();
+                            System.out.println("Ingrese  la segunda matriz");
+                            B = lc.lectorDe2x2();
+                            System.out.println(A.suma(B));
+                            break;
                         }
                         case 4: {
+                            A = lc.lectorDe2x2();
+                            System.out.println("Ingrese  la segunda matriz");
+                            B = lc.lectorDe2x2();
+                            System.out.println(A.mult(B));
+                            break;
                         }
                         case 5: {
+                            A = lc.lectorDe2x2();
+                            System.out.println("Ingrese  la segunda matriz");
+                            B = lc.lectorDe2x2();
+                            System.out.println(A.determinante());
+                            break;
                         }
                         case 6: {
+                            System.out.println();
+
+                            break;
                         }
                         case 7: {
+                            System.out.println("hola");
+                            break;
                         }
                     }
                 }
                 case 2: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n4) Multiplicacion\n " +
-                            "5) Determinate\n6) Rotacion\n7) Multiplicaion por vector");
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n4) Resta\n5) Multiplicacion\n"+
+                            "6) Determinate\n7) Rotacion en X\n8) Rotacion en Y\n9) Rotacion en Z");
                     x = lc.getInteger(mensaje);
+                    OMat3x3 w = new OMat3x3();
+                    OMat3x3 we = new OMat3x3();
+                    switch (x){
+                        case 1:{
+                           w = lc.lectorDe3x3();
+                           System.out.println(w.transpuesta());
+                           break;
+                        }
+                        case 2:{
+
+                        }
+                        case 3:{
+                            w = lc.lectorDe3x3();
+                            we = lc.lectorDe3x3();
+                            System.out.println(w.suma(we));
+                            break;
+                        }
+                        case 4:{
+                            w = lc.lectorDe3x3();
+                            we = lc.lectorDe3x3();
+                            System.out.println(w.resta(we));
+                            break;
+                        }
+                        case 5:{
+                            w = lc.lectorDe3x3();
+                            we = lc.lectorDe3x3();
+                            System.out.println(w.mult(we));
+                            break;
+                        }
+                        case 6:{
+                            w = lc.lectorDe3x3();
+                            System.out.println(w.determinante());
+                            break;
+                        }
+                        case 7:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negaivos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(w.rotX(cola));
+                            break;
+                        }
+                        case 8:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negaivos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(w.rotY(cola));
+                            break;
+                        }
+                        case 9:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negaivos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(w.rotZ(cola));
+                            break;
+                        }
+                    }
 
                 }
                 case 3: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n4) Multiplicacion\n " +
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n4) Multiplicacion\n"+
                             "5) Determinate\n6) Rotacion\n7) Multiplicaion por vector");
                     x = lc.getInteger(mensaje);
                     switch (x) {
                         case 1: {
                             System.out.println("Ingrese la matriz");
-
                         }
-
-
                     }
                 }
             }

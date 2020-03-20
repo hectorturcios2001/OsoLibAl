@@ -1,80 +1,87 @@
 package hn.edu.ujcv.progra;
 
 public class OMat2x2{
-
-    private double i;
-    private double j;
-
-    public OMat2x2(double i, double j){}
-
-    public OMat2x2(OMat2x2 a,OMat2x2 b){
-
-    }
+    private double m11;
+    private double m12;
+    private double m21;
+    private double m22;
+    private double alpha;
 
     public OMat2x2(){}
 
-    public void setCol1 (OMat4x4 b){
-        this.i = i;
-        this.j = j;
+    public OMat2x2(double m11, double m12,
+                   double m21, double m22){
+        this.m11 = m11;
+        this.m12 = m12;
+        this.m21 = m21;
+        this.m22 = m22;
     }
 
+    public void setM11(double m11){
+        this.m11 = m11;
+    }
+    public void setM12(double m12){
+        this.m12 = m12;
+    }
+    public void setM21(double m21) {
+        this.m21 = m21;
+    }
+    public void setM22(double m22) {
+        this.m22 = m22;
+    }
+    public void setAlpha(double alpha){
+        this.alpha = alpha;
+    }
+    public double getM11() {
+        return m11;
+    }
+    public double getM12() {
+        return m12;
+    }
+    public double getM21() {
+        return m21;
+    }
+    public double getM22() {
+        return m22;
+    }
 
-    public OMat2x2 transpuesta(OVecR2 b){
-
-
+    public OMat2x2 transpuesta(){
+        double c = m21;
+        m21 = m12;
+        m12 = c;
         return new OMat2x2();
     }
 
     public OMat2x2 inversa(){
-        //TODO: implementar
+        double c = m11;
+        m11 = m22;
+        m22 = c;
+        m12 = -m12;
+        m21 = -m21;
         return new OMat2x2();
     }
     public OMat2x2 suma(OMat2x2 b){
-        //TODO: implementar
-        return new OMat2x2();
+        return new OMat2x2(m11+b.m11,m12+b.m12,m21+b.m21,m22+b.m22);
     }
 
     public OMat2x2 resta(OMat2x2 b){
-        //TODO: implementar
-        return new OMat2x2();
+        return new OMat2x2(m11-b.m11,m12-b.m12,m21-b.m21,m22-b.m22);
     }
 
     public OMat2x2 mult(OMat2x2 b){
-        //TODO: implementar
-        //    m11  m12
-        //    m21  m22
-        //
-        //
-        //  m11   =  a.m11 * b.m11 + a.m12 * b.m21
-        //  m12   =  a.m11 * b.m12 + a.m12 * b.m22
-        //
-        return new OMat2x2();
-    }
+        return new OMat2x2(m11*b.m11+m12*b.m21,m11*b.m12+m12*b.m22,m21*m11+m22*m21,m21*m12+m22*b.m22);}
 
     public double determinante(){
-        //TODO: implementar
-        return 0.0f;
+        double c = m11*m22-m12*m21;
+        return c;
     }
 
-    // Metodos de la clase.
     public static OMat2x2 rot(double alpha){
-        // cos a   -sin a
-        // sin a   cos a
-        double m11,m12,m21,m22;
-
-
-        m11 = Math.cos(alpha);
-        m12 = -Math.sin(alpha);
-        m21 = Math.sin(alpha);
-        m22 = Math.cos(alpha);
-        return new OMat2x2();
+        return new OMat2x2(Math.cos(alpha), -Math.sin(alpha), Math.sin(alpha), Math.cos(alpha));
     }
 
-    public static OMat2x2 identidad(){
-
-
-        //TODO: implementar
-        return new OMat2x2();
+    public static OMat2x2 identidad(OMat2x2 a){
+        return new OMat2x2(1,0,0,1);
     }
 
 
@@ -87,8 +94,17 @@ public class OMat2x2{
         return new OVecR2();
     }
 
+    @Override
+    public String toString() {
+        return "Resultado{" +
+                "m11=" + m11 +
+                ", m12=" + m12 +
+               "\n "+"\t\t\tm21=" + m21 +
+                ", m22=" + m22 +
+                '}';
+    }
+// constructores
 
-    // constructores
 
 
 }
