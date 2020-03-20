@@ -201,7 +201,8 @@ public class Main {
                         case 2:{
                             w = lc.lectorDe3x3();
                             w.inversa(w);
-
+                            System.out.println(w.inversa(w));
+                            break;
                         }
                         case 3:{
                             w = lc.lectorDe3x3();
@@ -261,8 +262,8 @@ public class Main {
                     break;
                 }
                 case 3: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n4) Resta\n5) Multiplicacion\n"+
-                            "6) Determinate\n7) Rotacion en X\n8) Rotacion en Y\n9) Rotacion en Z\n10) Cancelar");
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Suma\n3) Resta\n4) Multiplicacion\n"+
+                            "5) Determinate\n6) Rotacion en X\n7) Rotacion en Y\n8) Rotacion en Z\n9) Cancelar");
                     x = lc.getInteger(mensaje);
                     OMat4x4 A = new OMat4x4();
                     OMat4x4 B = new OMat4x4();
@@ -272,30 +273,29 @@ public class Main {
                           System.out.println(A.transpuesta());
                           break;
                         }
-                        case 2:{ }
-                        case 3:{
+                        case 2:{
                             A = lc.lectorDe4x4();
                             B = lc.lectorDe4x4();
                             System.out.println(A.suma(B));
                         }
-                        case 4:{
+                        case 3:{
                             A = lc.lectorDe4x4();
                             B = lc.lectorDe4x4();
                             System.out.println(A.resta(B));
                             break;
                         }
-                        case 5:{
+                        case 4:{
                             A = lc.lectorDe4x4();
                             B = lc.lectorDe4x4();
                             System.out.println(A.mult(B));
                             break;
                         }
-                        case 6:{
+                        case 5:{
                             A = lc.lectorDe4x4();
                             System.out.println(A.determinante());
                             break;
                         }
-                        case 7:{
+                        case 6:{
                             System.out.println("Ingrese el angulo");
                             double cola = lc.getDouble(mensaje);
                             while (cola < 0){
@@ -305,7 +305,7 @@ public class Main {
                             System.out.println(A.rotX(cola));
                             break;
                         }
-                        case 8:{
+                        case 7:{
                             System.out.println("Ingrese el angulo");
                             double cola = lc.getDouble(mensaje);
                             while (cola < 0){
@@ -315,7 +315,7 @@ public class Main {
                             System.out.println(A.rotY(cola));
                             break;
                         }
-                        case 9:{
+                        case 8:{
                             System.out.println("Ingrese el angulo");
                             double cola = lc.getDouble(mensaje);
                             while (cola < 0){
@@ -325,7 +325,7 @@ public class Main {
                             System.out.println(A.rotZ(cola));
                             break;
                         }
-                        case 10:{break;}
+                        case 9:{break;}
                     }
                 }
                 break;
