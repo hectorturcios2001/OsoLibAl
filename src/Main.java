@@ -28,7 +28,6 @@ public class Main {
                         case 1:{
                             switch (x) {
                                 case 1: {
-
                                     vec = lc.lecVec2();
                                     b = lc.lecVec2b();
                                     System.out.println("La suma es " + vec.suma(b));
@@ -223,7 +222,7 @@ public class Main {
                             System.out.println("Ingrese el angulo");
                             double cola = lc.getDouble(mensaje);
                             while (cola < 0){
-                                System.out.println("Los angulos no pueden ser negaivos \n"+"Ingrese un angulo valido");
+                                System.out.println("Los angulos no pueden ser negativos \n"+"Ingrese un angulo valido");
                                 cola = lc.getDouble(mensaje);
                             }
                             System.out.println(w.rotX(cola));
@@ -233,7 +232,7 @@ public class Main {
                             System.out.println("Ingrese el angulo");
                             double cola = lc.getDouble(mensaje);
                             while (cola < 0){
-                                System.out.println("Los angulos no pueden ser negaivos \n"+"Ingrese un angulo valido");
+                                System.out.println("Los angulos no pueden ser negativos \n"+"Ingrese un angulo valido");
                                 cola = lc.getDouble(mensaje);
                             }
                             System.out.println(w.rotY(cola));
@@ -253,12 +252,69 @@ public class Main {
 
                 }
                 case 3: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n4) Multiplicacion\n"+
-                            "5) Determinate\n6) Rotacion\n7) Multiplicaion por vector");
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n 4) Resta\n5) Multiplicacion\n"+
+                            "6) Determinate\n7) Rotacion en X\n8) Rotacion en Y\n9) Rotacion en Z");
                     x = lc.getInteger(mensaje);
+                    OMat4x4 A = new OMat4x4();
+                    OMat4x4 B = new OMat4x4();
                     switch (x) {
                         case 1: {
-                            System.out.println("Ingrese la matriz");
+                          A = lc.lectorDe4x4();
+                          System.out.println(A.transpuesta());
+                          break;
+                        }
+                        case 2:{ }
+                        case 3:{
+                            A = lc.lectorDe4x4();
+                            B = lc.lectorDe4x4();
+                            System.out.println(A.suma(B));
+                        }
+                        case 4:{
+                            A = lc.lectorDe4x4();
+                            B = lc.lectorDe4x4();
+                            System.out.println(A.resta(B));
+                            break;
+                        }
+                        case 5:{
+                            A = lc.lectorDe4x4();
+                            B = lc.lectorDe4x4();
+                            System.out.println(A.mult(B));
+                            break;
+                        }
+                        case 6:{
+                            A = lc.lectorDe4x4();
+                            System.out.println(A.determinante());
+                            break;
+                        }
+                        case 7:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negativos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(A.rotX(cola));
+                            break;
+                        }
+                        case 8:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negativos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(A.rotY(cola));
+                            break;
+                        }
+                        case 9:{
+                            System.out.println("Ingrese el angulo");
+                            double cola = lc.getDouble(mensaje);
+                            while (cola < 0){
+                                System.out.println("Los angulos no pueden ser negativos \n"+"Ingrese un angulo valido");
+                                cola = lc.getDouble(mensaje);
+                            }
+                            System.out.println(A.rotZ(cola));
+                            break;
                         }
                     }
                 }

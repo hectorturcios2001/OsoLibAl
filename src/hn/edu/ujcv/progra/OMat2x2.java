@@ -53,12 +53,8 @@ public class OMat2x2{
     }
 
     public OMat2x2 inversa(){
-        double c = m11;
-        m11 = m22;
-        m22 = c;
-        m12 = -m12;
-        m21 = -m21;
-        return new OMat2x2();
+        return new OMat2x2( (1) / ((m11 * m22) - (m21 * m12)) * m22, (1) / ((m11 * m22) - (m21 * m12)) * -m12,
+                (1) / ((m11 * m22) - (m21 * m12)) * -m21, (1) / ((m11 * m22) - (m21 * m12)) * m11);
     }
     public OMat2x2 suma(OMat2x2 b){
         return new OMat2x2(m11+b.m11,m12+b.m12,m21+b.m21,m22+b.m22);
@@ -84,14 +80,11 @@ public class OMat2x2{
         return new OMat2x2(1,0,0,1);
     }
 
-
-    // v * M => vector
-
-    public OVecR2 mult(OVecR2 a){
+    public OVecR2 mult2(OVecR2 a){
         //             x                        y
         //  ( a.x * m11 + a.y * m21 , a.x * m12 + a.y * m22)
         //
-        return new OVecR2();
+        return new OVecR2(a.getI()*m11+a.getJ()*m21,a.getI()*m12+a.getJ()*m22);
     }
 
     @Override

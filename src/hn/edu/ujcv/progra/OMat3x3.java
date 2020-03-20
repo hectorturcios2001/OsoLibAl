@@ -60,6 +60,7 @@ public class OMat3x3 {
     public OMat3x3 inversa(){
         return new OMat3x3();
     }
+
     public OMat3x3 suma(OMat3x3 b){
         return new OMat3x3(m11+b.m11,m12+b.m12,m13+b.m13,m21+b.m21,m22+b.m22,m23+b.m23,m31+b.m31,m32+b.m32,m33+b.m33);
     }

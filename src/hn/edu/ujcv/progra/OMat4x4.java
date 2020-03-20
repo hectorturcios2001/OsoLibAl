@@ -15,10 +15,76 @@ public class OMat4x4 {
 
     public OMat4x4(){}
 
-    // metodos
+    public void setM22(double m22) {
+        this.m22 = m22;
+    }
 
-    public OMat4x4 inversa(){
+    public void setM21(double m21) {
+        this.m21 = m21;
+    }
+
+    public void setM11(double m11) {
+        this.m11 = m11;
+    }
+
+    public void setM12(double m12) {
+        this.m12 = m12;
+    }
+
+    public void setM13(double m13) {
+        this.m13 = m13;
+    }
+
+    public void setM14(double m14) {
+        this.m14 = m14;
+    }
+
+    public void setM24(double m24) {
+        this.m24 = m24;
+    }
+
+    public void setM23(double m23) {
+        this.m23 = m23;
+    }
+
+    public void setM32(double m32) {
+        this.m32 = m32;
+    }
+
+    public void setM31(double m31) {
+        this.m31 = m31;
+    }
+
+    public void setM33(double m33) {
+        this.m33 = m33;
+    }
+
+    public void setM34(double m34) {
+        this.m34 = m34;
+    }
+
+    public void setM41(double m41) {
+        this.m41 = m41;
+    }
+
+    public void setM42(double m42) {
+        this.m42 = m42;
+    }
+
+    public void setM43(double m43) {
+        this.m43 = m43;
+    }
+
+    public void setM44(double m44) {
+        this.m44 = m44;
+    }
+    // Metodos
+
+    public OMat4x4 transpuesta(){
         return new OMat4x4(m11,m21,m31,m41,m12,m22,m32,m42,m13,m23,m33,m43,m14,m24,m34,m44);
+    }
+    public OMat4x4 inversa(){
+        return new OMat4x4();
     }
     public OMat4x4 suma(OMat4x4 b){
 
@@ -57,7 +123,7 @@ public class OMat4x4 {
     public static OMat4x4 rotZ(double alpha){
         return new OMat4x4(Math.cos(alpha),-Math.sin(alpha),0,0,Math.sin(alpha),Math.cos(alpha),0,0,0,0,1,0,0,0,0,1);
     }
-    
+
 
     public static OMat4x4 identidad(){
         return new OMat4x4(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);

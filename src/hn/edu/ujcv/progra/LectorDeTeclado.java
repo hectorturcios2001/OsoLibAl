@@ -187,5 +187,43 @@ public class LectorDeTeclado {
         a.setM33(lc.getDouble(mensaje));
         return a;
     }
+    public OMat4x4 lectorDe4x4() {
+        String mensaje = "Numero invelido reintente";
+        LectorDeTeclado lc = new LectorDeTeclado();
+        OMat4x4 mat4x4 = new OMat4x4();
+        System.out.println("Ingrese el numero de la poscion 1,1");
+        mat4x4.setM11(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 1,2");
+        mat4x4.setM12(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 1,3");
+        mat4x4.setM13(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 1,4");
+        mat4x4.setM14(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 2,1");
+        mat4x4.setM21(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 2,2");
+        mat4x4.setM22(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 2,3");
+        mat4x4.setM23(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 2,4");
+        mat4x4.setM24(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 3,1");
+        mat4x4.setM31(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 3,2");
+        mat4x4.setM32(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 3,3");
+        mat4x4.setM33(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 3,4");
+        mat4x4.setM34(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 4,1");
+        mat4x4.setM41(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 4,2");
+        mat4x4.setM42(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 4,3");
+        mat4x4.setM43(lc.getDouble(mensaje));
+        System.out.println("Ingrese el numero de la poscion 4,4");
+        mat4x4.setM44(lc.getDouble(mensaje));
+        return mat4x4;
+    }
 }
 
