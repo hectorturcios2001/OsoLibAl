@@ -17,6 +17,7 @@ public class OMat2x2{
         this.m22 = m22;
     }
 
+
     public void setM11(double m11){
         this.m11 = m11;
     }
@@ -44,12 +45,11 @@ public class OMat2x2{
     public double getM22() {
         return m22;
     }
+    public double getAlpha(){return alpha;}
 
     public OMat2x2 transpuesta(){
-        double c = m21;
-        m21 = m12;
-        m12 = c;
-        return new OMat2x2();
+        return new OMat2x2(this.m22,this.m21,
+                this.m12,this.m11);
     }
 
     public OMat2x2 inversa(){
@@ -65,7 +65,8 @@ public class OMat2x2{
     }
 
     public OMat2x2 mult(OMat2x2 b){
-        return new OMat2x2(m11*b.m11+m12*b.m21,m11*b.m12+m12*b.m22,m21*m11+m22*m21,m21*m12+m22*b.m22);}
+
+        return new OMat2x2(m11*b.m11 +  m12*b.m21,m11*b.m12 + m12*b.m22,m21*b.m21 + m22*b.m21,m21*b.m12 + m22*b.m22);}
 
     public double determinante(){
         double c = m11*m22-m12*m21;
@@ -90,10 +91,10 @@ public class OMat2x2{
     @Override
     public String toString() {
         return "Resultado{" +
-                "m11=" + m11 +
-                ", m12=" + m12 +
-               "\n "+"\t\t\tm21=" + m21 +
-                ", m22=" + m22 +
+                "m11=" + getM11() +
+                ", m12=" + getM12() +
+               "\n"+"\t\t  m21=" + getM21() +
+                ", m22=" + getM22() +
                 '}';
     }
 // constructores

@@ -9,14 +9,17 @@ public class OVecR4 {
 
 //  Constructores
     public OVecR4(double i, double j, double k, double l) {
-
+        this.i = i;
+        this.j = j;
+        this.k = k;
+        this.l = l;
     }
     public OVecR4(){
 
     }
 
     // accesoras
-    public double setI(double aDouble){
+    public double setI(){
         return i;
     }
     public double setJ(){
@@ -29,7 +32,7 @@ public class OVecR4 {
         return l;
     }
 //    setters
-    public void SetI(double i){
+    public void setI(double i){
         this.i = i;
     }
     public void setJ(double j){
@@ -42,10 +45,11 @@ public class OVecR4 {
         this.l = l;
     }
 
+
+
     // metodos
 
     public OVecR4 suma(OVecR4 b){
-
         return new OVecR4(this.i + b.i, this.j+b.j, this.k+b.k, this.l+b.l);
     }
 
@@ -55,7 +59,7 @@ public class OVecR4 {
     }
 
     public double prodPunto(OVecR4 b){
-        double puntoR4 = this.i*b.i + this.j*b.j + this.k*b.k + this.l*b.l;
+        double puntoR4 = (this.i*b.i) + (this.j*b.j) + (this.k*b.k) + (this.l*b.l);
         return puntoR4;
     }
 
@@ -67,10 +71,12 @@ public class OVecR4 {
     @Override
     public String toString() {
         return
-                "i=" + i +
+                "{i=" + i +
                 ", j=" + j +
                 ", k=" + k +
                 ", l=" + l +
                 '}';
     }
+
+
 }

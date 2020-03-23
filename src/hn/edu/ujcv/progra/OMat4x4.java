@@ -11,6 +11,22 @@ public class OMat4x4 {
                     double m21, double m22, double m23, double m24,
                     double m31, double m32, double m33, double m34,
                     double m41, double m42, double m43, double m44){
+        this.m11 = m11;
+        this.m12=m12;
+        this.m13=m13;
+        this.m14=m14;
+        this.m21=m21;
+        this.m22=m22;
+        this.m23=m23;
+        this.m24=m24;
+        this.m31=m31;
+        this.m32=m32;
+        this.m33=m33;
+        this.m34=m34;
+        this.m41=m41;
+        this.m42=m42;
+        this.m43=m43;
+        this.m44=m44;
     }
 
     public OMat4x4(){}
@@ -101,7 +117,7 @@ public class OMat4x4 {
 
     public OMat4x4 mult(OMat4x4 b){
 
-        return new OMat4x4();
+        return new OMat4x4((this.m11 * b.m11) + (this.m12 * b.m21) + (this.m13 * b.m31) + (this.m14 * b.m41),(this.m11 * b.m12) + (this.m12 * b.m22) + (this.m13 * b.m32) + (this.m14 * b.m42),(this.m11 * b.m13) + (this.m12 * b.m23) + (this.m13 * b.m33) + (this.m14 * b.m43),(this.m11 * b.m14) + (this.m12 * b.m24) + (this.m13 * b.m34) + (this.m14 * b.m44),(this.m21 * b.m11) + (this.m22 * b.m21) + (this.m23 * b.m31) + (this.m24 * b.m41),(this.m21 * b.m12) + (this.m22 * b.m22) + (this.m23 * b.m32) + (this.m24 * b.m42),(this.m21 * b.m13) + (this.m22 * b.m23) + (this.m23 * b.m33) + (this.m24 * b.m43),(this.m21 * b.m14) + (this.m22 * b.m24) + (this.m23 * b.m34) + (this.m24 * b.m44),(this.m31 * b.m11) + (this.m32 * b.m21) + (this.m33 * b.m31) + (this.m34 * b.m41),(this.m31 * b.m12) + (this.m32 * b.m22) + (this.m33 * b.m32) + (this.m34 * b.m42),(this.m31 * b.m13) + (this.m32 * b.m23) + (this.m33 * b.m33) + (this.m34 * b.m43),(this.m31 * b.m14) + (this.m32 * b.m24) + (this.m33 * b.m34) + (this.m34 * b.m44),(this.m41 * b.m11) + (this.m42 * b.m21) + (this.m43 * b.m31) + (this.m44 * b.m41),(this.m41 * b.m12) + (this.m42 * b.m22) + (this.m43 * b.m32) + (this.m44 * b.m42),(this.m41 * b.m13) + (this.m42 * b.m23) + (this.m43 * b.m33) + (this.m44 * b.m43),(this.m41 * b.m14) + (this.m42 * b.m24) + (this.m43 * b.m34) + (this.m44 * b.m44));
     }
 
     public double determinante(){
@@ -127,5 +143,25 @@ public class OMat4x4 {
         return new OMat4x4(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1);
     }
 
-    // constructores
+    @Override
+    public String toString() {
+        return "Resultado{" +
+                "m11=" + m11 +
+                ", m12=" + m12 +
+                ", m13=" + m13 +
+                ", m14=" + m14 +
+                ",\n\t\t  m21=" + m21 +
+                ", m22=" + m22 +
+                ", m23=" + m23 +
+                ", m24=" + m24 +
+                ",\n\t\t  m31=" + m31 +
+                ", m32=" + m32 +
+                ", m33=" + m33 +
+                ", m34=" + m34 +
+                ",\n\t\t  m41=" + m41 +
+                ", m42=" + m42 +
+                ", m43=" + m43 +
+                ", m44=" + m44 +
+                '}';
+    }
 }

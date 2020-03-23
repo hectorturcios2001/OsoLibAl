@@ -38,9 +38,7 @@ public class OVecR2 {
     }
 
     public double prodPunto(OVecR2 b){
-        double punto = this.i*b.i + this.j*b.j;
-
-        return punto;
+        return i = this.i*b.i + this.j*b.j;
     }
 
     public double magnitud(){
@@ -56,6 +54,7 @@ public class OVecR2 {
                 ", j=" + j +
                 '}';
     }
+
 
 
 }

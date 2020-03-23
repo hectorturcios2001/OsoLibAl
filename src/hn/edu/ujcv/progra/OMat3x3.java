@@ -98,12 +98,12 @@ public class OMat3x3 {
     public String toString() {
         return "Resultado{" +
                 "m11=" + m11 +
-                ", m12=" + m12 +
+                ",m12=" + m12 +
                 ", m13=" + m13 +
-               "\n"+ ", m21=" + m21 +
+               "\n\t\t"+ ", m21=" + m21 +
                 ", m22=" + m22 +
                 ", m23=" + m23 +
-                "\n"+", m31=" + m31 +
+                "\n\t\t"+", m31=" + m31 +
                 ", m32=" + m32 +
                 ", m33=" + m33 +
                 '}';

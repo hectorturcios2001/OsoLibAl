@@ -44,8 +44,8 @@ public class OVecR3 {
          return new OVecR3(this.i - b.i, this.j - b.j, this.k - b.k);
      }
      public OVecR3 prodCruz(OVecR3 b){
-//        preguntar
-       return new OVecR3((this.j*b.k)+(this.k*b.j),-((this.i*b.k)+(this.k*b.i)),(this.i*b.j)+(this.j*b.i));
+
+      return new OVecR3((this.j*b.k)-(this.k*b.j),-((this.i*b.k)-(this.k*b.i)),(this.i*b.j)-(this.j*b.i));
 
      }
     public double prodPunto(OVecR3 b){
@@ -55,7 +55,7 @@ public class OVecR3 {
     }
 
     public double magnitud(){
-        double magR2 = Math.sqrt(this.i*this.i+this.j+this.j+this.k+this.k);
+        double magR2 = Math.sqrt((Math.pow(this.i,2))+ (Math.pow(this.j,2))+(Math.pow(this.k,2)));
         return magR2;
 
     }
@@ -63,7 +63,7 @@ public class OVecR3 {
     @Override
     public String toString() {
         return
-                "i=" + i +
+                "{i=" + i +
                 ", j=" + j +
                 ", k=" + k +
                 '}';

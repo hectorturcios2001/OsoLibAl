@@ -14,7 +14,7 @@ public class Main {
         OMat4x4 c = new OMat4x4();
         OMat4x4 d = new OMat4x4();
         String mensaje = "Numero invalido reintente";
-        System.out.println("\n\t\t\tBienvenido a La Calculadora");
+        System.out.println("\n\n\t\t\t\tBienvenido a La Calculadora!!!!!!!!!!");
         double q = 0;
         while (q == 0 ){
             System.out.println("\t\t\n Que operacion desea reaizar \n1) Vectores\n2) Matrices");
@@ -38,6 +38,7 @@ public class Main {
                             vec = lc.lecVec2();
                             b = lc.lecVec2b();
                             System.out.println("La resta de los vectpres es: " + vec.resta(b));
+                            break;
                         }
                         case 3: {
                             vec = lc.lecVec2();
@@ -49,6 +50,7 @@ public class Main {
                             System.out.printf("Ingrese el Vector (i,j)\nIngrese i:");
                             vec.setI(lc.getDouble(mensaje));
                             System.out.printf("Ingrese j:");
+                            vec.setJ(lc.getDouble(mensaje));
                             System.out.println(vec.magnitud());
                             break;
                         }
@@ -64,31 +66,31 @@ public class Main {
                     switch (x) {
                         case 1: {
                             vecR3 = lc.lectorR3A();
+                            System.out.println("");
                             vecR3B = lc.lectorR3B();
                             System.out.println("El resultado es " + vecR3.suma(vecR3B));
                             break;
                         }
                         case 2: {
-                            vecR3 = lc.lectorR3A();
+                            vecR3 = lc.lectorR3A();                            System.out.println("");
                             vecR3B = lc.lectorR3B();
                             System.out.println("El resultado es " + vecR3.resta(vecR3B));
                             break;
                         }
                         case 3: {
-                            vecR3 = lc.lectorR3A();
+                            vecR3 = lc.lectorR3A();                            System.out.println("");
                             vecR3B = lc.lectorR3B();
                             System.out.println("El resultado es " + vecR3.prodCruz(vecR3B));
                             break;
                         }
                         case 4: {
-                            vecR3 = lc.lectorR3A();
+                            vecR3 = lc.lectorR3A();                            System.out.println("");
                             vecR3B = lc.lectorR3B();
                             System.out.println("El resultado es " + vecR3.prodPunto(vecR3B));
                             break;
                         }
                         case 5: {
                             vecR3 = lc.lectorR3A();
-                            vecR3B = lc.lectorR3B();
                             System.out.println("El resultado es " + vecR3.magnitud());
                             break;
                         }
@@ -103,26 +105,32 @@ public class Main {
                     OVecR4 vecR4B = new OVecR4();
                     switch (x) {
                         case 1: {
+                            System.out.println("Ingrese el vector A");
                             vecR4 = lc.lectorR4();
+                            System.out.println("\nIngrese el vector B");
                             vecR4B = lc.lectorR4();
                             System.out.println("El resultado es " + vecR4.suma(vecR4B));
                             break;
                         }
                         case 2: {
+                            System.out.println("Ingrese el vector A");
                             vecR4 = lc.lectorR4();
+                            System.out.println("\nIngrese el vector B");
                             vecR4B = lc.lectorR4();
                             System.out.println("El resultado es " + vecR4.resta(vecR4B));
                             break;
                         }
                         case 3: {
+                            System.out.println("Ingrese el vector A");
                             vecR4 = lc.lectorR4();
+                            System.out.println("\nIngrese el vector B");
                             vecR4B = lc.lectorR4();
                             System.out.println("El resultado es " + vecR4.prodPunto(vecR4B));
                             break;
                         }
                         case 4: {
+                            System.out.println("Ingrese el vector A");
                             vecR4 = lc.lectorR4();
-                            vecR4B = lc.lectorR4();
                             System.out.println("El resultado es " + vecR4.magnitud());
                             break;
                         }
@@ -137,52 +145,69 @@ public class Main {
             if(x == 4){break;}
             switch (x) {
                 case 1: {
-                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n4) Resta\n4) Multiplicacion\n" +
-                            "5) Determinate\n6) Rotacion\n7) Multiplicaion por vector\n8) Cancelar");
+                    System.out.println("Que operaciones desea?\n1) Transpuesta\n2) Inversa\n3) Suma\n4) Resta\n5) Multiplicacion\n" +
+                            "6) Determinate\n7) Rotacion\n8) Multiplicaion por vector\n9) Cancelar");
                     x = lc.getInteger(mensaje);
                     OMat2x2 A = new OMat2x2();
                     OMat2x2 B = new OMat2x2();
                     switch (x) {
                         case 1: {
+                            System.out.println("Ingrese la matriz");
+                            A = lc.lectorDe2x2();
+                            System.out.println(A.transpuesta());
+                            break;
+                        }
+                        case 2: {
+                            System.out.println("Ingrese la matriz");
                             A = lc.lectorDe2x2();
                             System.out.println(A.inversa());
                             break;
                         }
-                        case 2: {
-
-                            break;
-                        }
                         case 3: {
+                            System.out.println("Ingrese la primera matriz");
                             A = lc.lectorDe2x2();
-                            System.out.println("Ingrese  la segunda matriz");
+                            System.out.println("\nIngrese  la segunda matriz");
                             B = lc.lectorDe2x2();
                             System.out.println(A.suma(B));
                             break;
                         }
                         case 4: {
+                            System.out.println("Ingrese la primera matriz");
                             A = lc.lectorDe2x2();
-                            System.out.println("Ingrese  la segunda matriz");
+                            System.out.println("\nIngrese  la segunda matriz");
+                            B = lc.lectorDe2x2();
+                            System.out.println(A.resta(B));
+                            break;
+                        }
+                        case 5: {
+                            System.out.println("Ingrese la primera matriz");
+                            A = lc.lectorDe2x2();
+                            System.out.println("\nIngrese  la segunda matriz");
                             B = lc.lectorDe2x2();
                             System.out.println(A.mult(B));
                             break;
                         }
-                        case 5: {
+                        case 6:{
+                            System.out.println("Ingrese la matriz");
                             A = lc.lectorDe2x2();
-                            System.out.println("Ingrese  la segunda matriz");
-                            B = lc.lectorDe2x2();
-                            System.out.println(A.determinante());
-                            break;
-                        }
-                        case 6: {
-                            System.out.println();
-
+                            System.out.println("\nEl determinante es "+A.determinante());
                             break;
                         }
                         case 7: {
-                            System.out.println("hola");
+                            System.out.println("Ingrese el angulo de rotacion");
+                            A.setAlpha(lc.getDouble(mensaje));
+                            System.out.println(A.rot(A.getAlpha()));
                             break;
                         }
-                        case 8:{break;}
+                        case 8: {
+                            System.out.println("Ingrese el vector");
+                            vec = lc.lecVec2();
+                            System.out.println("\nImgrese la matriz");
+                            A = lc.lectorDe2x2();
+                            System.out.println("\nEl resultado es "+A.mult2(vec));
+                            break;
+                        }
+                        case 9:{break;}
                     }
                     break;
                 }
@@ -205,26 +230,32 @@ public class Main {
                             break;
                         }
                         case 3:{
+                            System.out.println("Ingrese la primera matriz");
                             w = lc.lectorDe3x3();
+                            System.out.println("\nIngrese la segunda matriz");
                             we = lc.lectorDe3x3();
                             System.out.println(w.suma(we));
                             break;
                         }
                         case 4:{
+                            System.out.println("Ingrese la primera matriz");
                             w = lc.lectorDe3x3();
+                            System.out.println("\nIngrese la segunda matriz");
                             we = lc.lectorDe3x3();
                             System.out.println(w.resta(we));
                             break;
                         }
                         case 5:{
+                            System.out.println("Ingrese la primera matriz");
                             w = lc.lectorDe3x3();
+                            System.out.println("\nIngrese la segunda matriz");
                             we = lc.lectorDe3x3();
                             System.out.println(w.mult(we));
                             break;
                         }
                         case 6:{
                             w = lc.lectorDe3x3();
-                            System.out.println(w.determinante());
+                            System.out.println("El determinante es "+w.determinante());
                             break;
                         }
                         case 7:{
@@ -274,25 +305,32 @@ public class Main {
                           break;
                         }
                         case 2:{
+                            System.out.println("Ingrese la primer matriz");
                             A = lc.lectorDe4x4();
+                            System.out.println("\nIngerese la segunda matriz");
                             B = lc.lectorDe4x4();
                             System.out.println(A.suma(B));
+                            break;
                         }
                         case 3:{
+                            System.out.println("Ingrese la primer matriz");
                             A = lc.lectorDe4x4();
+                            System.out.println("\nIngerese la segunda matriz");
                             B = lc.lectorDe4x4();
                             System.out.println(A.resta(B));
                             break;
                         }
                         case 4:{
+                            System.out.println("Ingrese la primer matriz");
                             A = lc.lectorDe4x4();
+                            System.out.println("\nIngerese la segunda matriz");
                             B = lc.lectorDe4x4();
                             System.out.println(A.mult(B));
                             break;
                         }
                         case 5:{
                             A = lc.lectorDe4x4();
-                            System.out.println(A.determinante());
+                            System.out.println("El determinante es "+A.determinante());
                             break;
                         }
                         case 6:{
@@ -332,6 +370,7 @@ public class Main {
             }
 
         }
+        System.out.println("");
         System.out.println("Desea hacer otra operacion\n1) Si\n2) No");
         int lo = lc.getInteger(mensaje);
         if(lo == 1){
